@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Booktitle:</strong>
+  <%= @readinglist.booktitle %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @readinglist.author %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @readinglist.year %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @readinglist.published %>
+</p>
+
+<p>
+  <strong>Read:</strong>
+  <%= @readinglist.read %>
+</p>
+
+<%= link_to 'Edit', edit_readinglist_path(@readinglist) %> |
+<%= link_to 'Back', readinglists_path %>

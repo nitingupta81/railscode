@@ -1,0 +1,33 @@
+<h1>Reading List Application</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Book Title</th>
+      <th>Author</th>
+      <th>Year</th>
+      <th>Published</th>
+      <th>Read?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @readinglists.each do |readinglist| %>
+      <tr>
+        <td><%= readinglist.booktitle %></td>
+        <td><%= readinglist.author %></td>
+        <td><%= readinglist.year %></td>
+        <td><%= readinglist.published %></td>
+        <td><%= readinglist.read %></td>
+        <td><%= link_to 'Show', readinglist %></td>
+        <td><%= link_to 'Edit', edit_readinglist_path(readinglist) %></td>
+        <td><%= link_to 'Destroy', readinglist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Readinglist', new_readinglist_path %>
